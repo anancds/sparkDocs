@@ -81,7 +81,8 @@ DataSet可以在编译时检查类型
 
 DataFrame和DataSet可以相互转化， df.as[ElementType] 这样可以把DataFrame转化为DataSet， ds.toDF() 这样可以把DataSet转化为DataFrame
 
-
+------------------------------------------------------
+**以下是文档翻译**
 
 ##Overview
 
