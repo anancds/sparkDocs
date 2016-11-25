@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+    <property>
+        <name>dfs.namenode.name.dir</name>
+        <value>/bigdata/salut/data/hadoop/dfs/name</value>
+    </property>
+    <property>
+        <name>dfs.datanode.data.dir</name>
+        <value>/bigdata/salut/data/hadoop/dfs/data</value>
+    </property>
+    <property>
+        <name>dfs.nameservices</name>
+        <value>mycluster</value>
+    </property>
+    <property>
+        <name>dfs.ha.namenodes.mycluster</name>
+        <value>nn1,nn2</value>
+    </property>
+    <property>
+        <name>dfs.namenode.rpc-address.mycluster.nn1</name>
+        <value>RPCMASTER1:8020</value>
+    </property>
+    <property>
+        <name>dfs.namenode.rpc-address.mycluster.nn2</name>
+        <value>RPCMASTER2:8020</value>
+    </property>
+    <property>
+        <name>dfs.namenode.http-address.mycluster.nn1</name>
+        <value>HTTPMASTER1:50070</value>
+    </property>
+    <property>
+        <name>dfs.namenode.http-address.mycluster.nn2</name>
+        <value>HTTPMASTER2:50070</value>
+    </property>
+    <property>
+        <name>dfs.client.failover.proxy.provider.mycluster</name>
+        <value>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider</value>
+    </property>
+    <property>
+        <name>dfs.ha.fencing.methods</name>
+        <value>shell(/bin/true)</value>
+    </property>
+    <property>
+        <name>dfs.namenode.shared.edits.dir</name>
+        <value>qjournal://SHAREIPS:8485/mycluster</value>
+    </property>
+    <property>
+        <name>dfs.journalnode.edits.dir</name>
+        <value>/bigdata/salut/data/tmp/journal</value>
+    </property>
+    <property>
+        <name>dfs.ha.automatic-failover.enabled</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.replication</name>
+        <value>2</value>
+    </property>
+    <property>
+        <name>dfs.webhdfs.enabled</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.namenode.avoid.read.stale.datanode</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.namenode.avoid.write.stale.datanode</name>
+        <value>true</value>
+    </property>
+    <property>
+        <name>dfs.namenode.stale.datanode.interval</name>
+        <value>30000</value>
+    </property>
+
+    <property>
+        <name>dfs.client.block.write.replace-datanode-on-failure.policy</name>
+        <value>NEVER</value>
+    </property>
+    <property>
+        <name>dfs.client.block.write.replace-datanode-on-failure.enable</name>
+        <value>true</value>
+    </property>
+
+</configuration>

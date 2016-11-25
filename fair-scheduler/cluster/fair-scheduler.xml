@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<allocations>
+    <queue name="streaming">
+        <minResources>STREAMING_MEMORY mb,STREAMING_VCORES vcores</minResources>
+    </queue>
+    <queue name="datawarehouse">
+        <minResources>DATAWAREHOUSE_MEMORY mb,DATAWAREHOUSE_VCORES vcores</minResources>
+    </queue>
+    <queue name="batch">
+        <minResources>BATCH_MEMORY mb,BATCH_VCORES vcores</minResources>
+        <maxRunningApps>1</maxRunningApps>
+    </queue>
+</allocations>

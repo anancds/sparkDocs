@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<configuration>
+	<property>
+		<name>yarn.nodemanager.log.retain-seconds</name>
+		<value>172800</value>
+	</property>
+	<property>
+		<name>yarn.resourcemanager.scheduler.class</name>
+		<value>org.apache.hadoop.yarn.server.resourcemanager.scheduler.fair.FairScheduler</value>
+	</property>
+	<property>
+		<name>yarn.nodemanager.aux-services</name>
+		<value>mapreduce_shuffle</value>
+	</property>
+	<!--<property>-->
+		<!--<name>yarn.resourcemanager.hostname</name>-->
+		<!--<value></value>-->
+	<!--</property>-->
+	<property>
+		<name>yarn.resourcemanager.webapp.address</name>
+		YARNSITEIPPORTOLD
+	</property>
+
+	<property>
+		<name>yarn.nodemanager.resource.memory-mb</name>
+		<value>81920</value>
+		<discription>每个节点可供YARN使用内存,64G</discription>
+	</property>
+	<property>
+		<name>yarn.nodemanager.resource.cpu-vcores</name>
+		<value>22</value>
+	</property>
+
+	<property>
+		<name>yarn.scheduler.minimum-allocation-mb</name>
+		<value>1024</value>
+	</property>
+	<property>
+		<name>yarn.scheduler.maximum-allocation-mb</name>
+		<value>32768</value>
+	</property>
+
+	<property>
+		<name>yarn.scheduler.minimum-allocation-vcores</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>yarn.scheduler.maximum-allocation-vcores</name>
+		<value>22</value>
+	</property>
+	<property>
+	    <name>yarn.nodemanager.vmem-check-enabled</name>
+	    <value>false</value>
+	    <description>Whether virtual memory limits will be enforced for containers</description>
+	</property>
+	<property>
+	    <name>yarn.nodemanager.vmem-pmem-ratio</name>
+	    <value>4</value>
+	    <description>Ratio between virtual memory to physical memory when setting memory limits for containers</description>
+	</property>
+
+</configuration>
+
